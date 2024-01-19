@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<form class="col bg-white" action="#" th:action="@{/greeting}" th:object="${logs}" method="post">
+    <div class="form-group col-md-4">
+        <div class="container">
+
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required   th:field="*{username}">
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required  th:field="*{password}">
+
+            <button type="submit">Login</button>
+
+        </div>
+    </div>
+</form>
+</body>
+</html>
